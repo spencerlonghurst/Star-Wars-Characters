@@ -21,7 +21,9 @@ const StyledP = styled.p `
 
 
 
-export default function Character ({ character }) {
+export default function Character (props) {
+  const { character } = props
+  // console.log(character.results[0].name)
     return (
         <div>
             <StyledName>Name: {character.name}</StyledName>

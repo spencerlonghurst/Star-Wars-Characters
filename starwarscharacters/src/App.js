@@ -16,23 +16,25 @@ export default function App() {
   useEffect(() => {
     axios.get('https://swapi.dev/api/people')
     .then(res => {
-      console.log(res.data);
-      setPerson(res.data);
+      console.log(res.data.results);
+      setPerson(res.data.results);
     })
     .catch(err => {
       console.error(err)
     });
   }, []);
 
+// console.log('person:', person)
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
       {
-        person.map((fr) => {
-          return <Character
-                    character={fr}
-
-                    />
+        person.map((persons, index) => {
+          return (<Character
+            key={index}
+            character={persons}
+            />
+          )
         })
       }
       
