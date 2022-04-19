@@ -11,7 +11,7 @@ const StyledName = styled.h2 `
 
 const StyledP = styled.p `
     display: flex;
-    justify-content: center;
+    justify-content: center;P
     &: hover {
         color: black;
         text-shadow: none;
@@ -23,7 +23,6 @@ const StyledP = styled.p `
 
 export default function Character (props) {
   const { character } = props
-  // console.log(character.results[0].name)
     return (
         <div>
             <StyledName>Name: {character.name}</StyledName>
